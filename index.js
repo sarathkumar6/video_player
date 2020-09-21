@@ -4,6 +4,14 @@ const stop = document.getElementById('stop');
 const progress = document.getElementById('progress');
 const timestamp = document.getElementById('timestamp');
 
+/**
+ * ToDo: 
+ * a) Upload the video to youtube and point the video tag to play the video on youtube
+ * b) Fix the input bar in the controls - better styles
+ * c) on click on the timestamp switch +00:00 or -00:00
+ * 
+ */
+
 // Play & pause video
 function toggleVideoStatus() {
   if (video.paused) {
