@@ -31,18 +31,12 @@ function updatePlayIcon() {
 // Calculates minutes based on the time
 function calculateMinutes(time) {
   let mins = Math.floor(time / 60);
-  if (mins < 10) {
-    mins = '0' + String(mins);
-  }
-  return mins
+  return mins < 10 ? `0${String(mins)}`: mins;
 }
 // Calculates seconds based on the time
 function calculateSeconds(time) {
   let secs = Math.floor(time % 60);
-  if (secs < 10) {
-    secs = '0' + String(secs);
-  }
-  return secs;
+  return secs < 10 ? `0${String(secs)}` : secs;
 }
 
 // Update progress & timestamp
@@ -69,7 +63,5 @@ video.addEventListener('play', updatePlayIcon);
 video.addEventListener('timeupdate', updateProgress);
 
 play.addEventListener('click', toggleVideoStatus);
-
 stop.addEventListener('click', stopVideo);
-
 progress.addEventListener('change', setVideoProgress);
